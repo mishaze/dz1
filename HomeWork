@@ -1,8 +1,9 @@
-fun formatPrice(price: Double = 0.0, measure: String = "шт", discount: Int = 0) {
+    fun formatPrice(price: Double = 0.0, measure: String = "шт", discount: Int = 0) {
+        val doPrice: Double = Math.round(price * 100.0) / 100.0
 
         when {
-            (discount == 0) -> print("$price/$measure")
-            (discount > 0) -> print("${price+price*discount/100}/$measure (скидка$discount)")
+            (discount == 0) -> print("$doPrice/$measure")
+            (discount > 0) -> print("${doPrice + doPrice * discount / 100}/$measure (скидка$discount)")
         }
 
     }
