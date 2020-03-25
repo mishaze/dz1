@@ -1,0 +1,8 @@
+fun formatPrice(price: Double = 0.0, measure: String = "шт", discount: Int = 0) {
+
+        when {
+            (discount == 0) -> print("$price/$measure")
+            (discount > 0) -> print("${price+price*discount/100}/$measure (скидка$discount)")
+        }
+
+    }
